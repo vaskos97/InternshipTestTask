@@ -8,17 +8,14 @@ from datetime import datetime
 
 def generate_html(path_to_data):
     """Generates content of html file and saves it.
-
     Parameters
     ----------
     path_to_data : str
         Path to data with original images, predicted masks, and cropped according masks images.
-
     Returns
     -------
     str
         Content of html file.
-
     """
     html = "\n".join(["<!doctype html>", "<html>", "<head>",
                       "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>",
@@ -60,7 +57,6 @@ def generate_html(path_to_data):
 
 def get_html(paths_to_imgs, pred_masks, path_to_save="results/test"):
     """Generates html file and saves it.
-
     Parameters
     ----------
     paths_to_imgs : list[str]
@@ -70,12 +66,10 @@ def get_html(paths_to_imgs, pred_masks, path_to_save="results/test"):
     path_to_save : str
         Path to save source images to put them in html file. Html name is the same as name of the
         last folder on `path_to_save` and is saved on upper level.
-
     Returns
     -------
     str
         Content of html file.
-
     """
     paths_to_imgs = np.array(paths_to_imgs)
     pred_masks = np.array(pred_masks)
